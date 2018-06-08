@@ -1,9 +1,10 @@
 .navbar {
   margin-bottom: 0;
 }
-
+/* Background pattern from Toptal Subtle Patterns */
 body {
-  background: #3E4649;
+  background:  url("/adamgordon/pics/backgrounds/use_your_illusion.png");
+  background-repeat: repeat;
   color: #f7f7f7;
   font-family: 'Montserrat', sans-serif;
 }
@@ -19,11 +20,12 @@ p {
 
 .jumbotron {
 
-  background: url("/pics/coverphoto.jpg");
+  background: url("/adamgordon/pics/coverphoto.jpg");
   background-position: center;
   background-size: cover;
   color: white;
   text-align: center;
+  height: auto;
 }
 
 .jumbotron p {
@@ -45,7 +47,8 @@ p {
 }
 
 .navbar-inverse {
-  background: #2E2F31;
+  background: #595959
+;
   border: 0;
 }
 
@@ -80,6 +83,7 @@ p {
 .call-to-action p{
   margin-bottom: 30px;
   font-family: sans-serif;
+  color: #DDD;
 }
 
 .call-to-action a{
@@ -91,11 +95,11 @@ p {
 }
 
 .glyphicon-large{
-  font-size: 100px;
+  font-size: 50px;
 }
 
 .about{
-  background:  #fff;
+  background: url("/adamgordon/pics/backgrounds/subtle_zebra_3d.png");
   color: #111;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -103,6 +107,7 @@ p {
 
 .about-me-header{
   font-size: 40px;
+  margin-top: 50px
 }
 .spacer{
   margin-bottom: 60px
@@ -116,7 +121,4 @@ p {
 
 .about-text-header{
   margin-top: 50px;
-}
-.aboutme{
-  background: #000;
 }

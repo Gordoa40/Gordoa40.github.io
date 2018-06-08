@@ -3,7 +3,8 @@
 }
 
 body {
-  background: #3E4649;
+  background:  url("/adamgordon/pics/backgrounds/use_your_illusion.png");
+  background-repeat: repeat;
   color: #f7f7f7;
   font-family: 'Montserrat', sans-serif;
 }
@@ -94,4 +95,5 @@ p {
   align-self: center;
   align-items: center;
   align-items:center;
+  margin-left: 100px;
 }
