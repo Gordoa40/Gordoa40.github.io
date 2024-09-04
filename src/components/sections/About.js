@@ -1,7 +1,9 @@
 import React from 'react';
+import PageTransition from './PageTransition';
 
 const About = () => {
   return (
+    <PageTransition>
     <section className="py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">About Me</h2>
@@ -16,6 +18,7 @@ const About = () => {
         </button>
       </div>
     </section>
+    </PageTransition>
   );
 };
 

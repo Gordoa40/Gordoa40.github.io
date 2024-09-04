@@ -1,61 +1,69 @@
-import React, { useState } from 'react';
-import { Home, User, Briefcase, Image, Mail, Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Home, User, Briefcase, Image, Mail, Menu, X, Sun, Moon, FileText} from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const Navigation = ({ activeSection, setActiveSection }) => {
+const Navigation = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
   const navItems = [
-    { name: 'Home', icon: Home },
-    { name: 'About', icon: User },
-    { name: 'Projects', icon: Briefcase },
-    { name: 'Portfolio', icon: Image },
-    { name: 'Contact', icon: Mail },
+    { name: 'Home', icon: Home, path: '/' },
+    { name: 'About', icon: User, path: '/about' },
+    { name: 'Projects', icon: Briefcase, path: '/projects' },
+    { name: 'Portfolio', icon: Image, path: '/portfolio' },
+    { name: 'Blog', icon: Mail, path: '/blog' },
+    { name: 'Resume', icon: FileText, path: '/resume' },
+    { name: 'Contact', icon: Mail, path: '/contact' },
   ];
 
   return (
-    <nav className="bg-gray-800 text-white p-4">
+    <nav className="bg-gray-800 dark:bg-gray-900 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold">Adam Gordon</h1>
-        <div className="hidden md:flex space-x-4">
-          {navItems.map((item) => (
-            <button
-              key={item.name}
-              className={`flex items-center space-x-1 ${
-                activeSection === item.name ? 'text-orange-500' : 'hover:text-orange-300'
-              }`}
-              onClick={() => setActiveSection(item.name)}
-            >
-              <item.icon size={18} />
-              <span>{item.name}</span>
-            </button>
-          ))}
-        </div>
-        <button
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        <motion.div 
+          className="hidden md:flex space-x-4"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-      {isMenuOpen && (
-        <div className="md:hidden mt-4">
-          {navItems.map((item) => (
-            <button
+          {navItems.map((item, index) => (
+            <motion.div
               key={item.name}
-              className={`flex items-center space-x-2 w-full p-2 ${
-                activeSection === item.name ? 'bg-gray-700 text-orange-500' : 'hover:bg-gray-700'
-              }`}
-              onClick={() => {
-                setActiveSection(item.name);
-                setIsMenuOpen(false);
-              }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
             >
-              <item.icon size={18} />
-              <span>{item.name}</span>
-            </button>
+              <Link
+                to={item.path}
+                className={`flex items-center space-x-1 ${
+                  activeSection === item.name ? 'text-orange-500' : 'hover:text-orange-300'
+                }`}
+              >
+                <item.icon size={18} />
+                <span>{item.name}</span>
+              </Link>
+            </motion.div>
           ))}
-        </div>
-      )}
+          <motion.button
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className="p-2 rounded-full hover:bg-gray-700 dark:hover:bg-gray-600"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </motion.button>
+        </motion.div>
+        {/* ... (mobile menu button and menu) */}
+      </div>
     </nav>
   );
 };

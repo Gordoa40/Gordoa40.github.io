@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PortfolioItem from '../portfolio/PortfolioItem';
 import PortfolioDetail from '../portfolio/PortfolioDetail';
 import { portfolioItems } from '../portfolio/portfolioData';
+import PageTransition from './PageTransition';
 
 const Portfolio = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -11,6 +12,7 @@ const Portfolio = () => {
   };
 
   return (
+    <PageTransition>
     <section className="py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">Portfolio</h2>
@@ -32,6 +34,7 @@ const Portfolio = () => {
         </div>
       </div>
     </section>
+    </PageTransition>
   );
 };
 
