@@ -69,13 +69,13 @@ const Home = () => {
                 title="Making"
                 description="Crafting unique pieces through woodworking, 3D printing, and more."
                 icon={Briefcase}
-                link="/portfolio"
+                link="/projects"
               />
               <FeatureCard
                 title="Content Creation"
                 description="Sharing knowledge and inspiration through TikTok and other platforms."
                 icon={Book}
-                link="/blog"
+                link="/about"
               />
               <FeatureCard
                 title="Collaboration"

@@ -21,7 +21,6 @@ const ProjectPage = () => {
     >
       <Link to="/projects" className="text-blue-500 hover:underline mb-4 inline-block">&larr; Back to Projects</Link>
       <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-      <PhotoGallery images={project.images} />
       <p className="text-gray-700 my-6">{project.fullDescription}</p>
       <div className="flex flex-wrap gap-2 mb-4">
         {project.skills.map((skill, index) => (
@@ -30,6 +29,8 @@ const ProjectPage = () => {
           </span>
         ))}
       </div>
+      <PhotoGallery images={project.images} />
+
       {/* Add more project details here */}
     </motion.div>
   );
