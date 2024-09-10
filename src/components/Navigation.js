@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Home, User, Briefcase, Image, Mail, Menu, X, Sun, Moon, FileText} from 'lucide-react';
+import { Home, User, Briefcase, Image, Mail, Menu, X, Sun, Moon, FileText, Gamepad2} from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Navigation = ({ activeSection }) => {
@@ -23,6 +23,7 @@ const Navigation = ({ activeSection }) => {
     { name: 'Blog', icon: Mail, path: '/blog' },
     { name: 'Resume', icon: FileText, path: '/resume' },
     { name: 'Contact', icon: Mail, path: '/contact' },
+    { name: 'Game', icon: Gamepad2, path: '/game' },
   ];
 
   return (
