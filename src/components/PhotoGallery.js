@@ -33,7 +33,7 @@ const PhotoGallery = ({ images }) => {
           >
             <img
               src={`/images/${image}`}
-              alt={`Project image ${index + 1}`}
+              alt={`Image ${index + 1}`}
               className="w-full h-auto object-cover rounded-lg shadow-md cursor-pointer"
             />
           </motion.div>
