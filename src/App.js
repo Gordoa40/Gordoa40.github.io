@@ -28,6 +28,7 @@ function App() {
         </Route>
         <Route path="/projects/:id" element={<ProjectPage />} />
         <Route path="/portfolio/:id" element={<PortfolioItemPage />} />
+        <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </Router>
   );

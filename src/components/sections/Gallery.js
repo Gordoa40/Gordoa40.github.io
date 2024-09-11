@@ -18,10 +18,12 @@ const galleryData = [
       { src: '/images/cad/cam1.png', alt: 'CAD Design 1' },
       { src: '/images/cad/cam2.png', alt: 'CAD Design 2' },
       { src: '/images/cad/cam3.png', alt: 'CAD Design 3' },
-      { src: '/images/cad/cam3.png', alt: 'CAD Design 3' },
-      { src: '/images/cad/gripper1.png', alt: 'CAD Design 3' },
-      { src: '/images/cad/gripperclosing.gif', alt: 'CAD Design 3' },
-      { src: '/images/cad/robotArm-1.png', alt: 'CAD Design 3' },
+      { src: '/images/cad/cam3.png', alt: 'CAD Design 4' },
+      { src: '/images/cad/gripper1.png', alt: 'CAD Design 5' },
+      { src: '/images/cad/gripperclosing.gif', alt: 'CAD Design 6' },
+      { src: '/images/cad/robotArm-1.png', alt: 'CAD Design 7' },
+      { src: '/images/cad/cabinet-1.png', alt: 'CAD Design 8' },
+
 
 
     ]
