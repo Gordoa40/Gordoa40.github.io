@@ -4,7 +4,7 @@ import PhotoGallery from '../PhotoGallery';
 import { Link } from 'react-router-dom';
 
 
-const images = ['adam-1.jpg', 'adam-2.jpg', 'adam-3.jpg', 'adam-4.jpg', 'adam-5.jpg', 'adam-6.jpg'];
+const images = ['adam-1.jpg', 'adam-2.jpg', 'adam-3.JPG', 'adam-4.jpg', 'adam-5.jpg', 'adam-6.jpg'];
 
 const About = () => {
   return (
