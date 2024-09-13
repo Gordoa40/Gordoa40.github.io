@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { setPageTitle } from '../utils';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PageTransition from './PageTransition';
@@ -38,6 +39,9 @@ const ProjectBlock = ({ project }) => (
 );
 
 const Projects = () => {
+  useEffect(() => {
+    setPageTitle("Projects");
+  }, []);
   const leftColumnProjects = projects.filter((_, index) => index % 2 === 0);
   const rightColumnProjects = projects.filter((_, index) => index % 2 !== 0);
 

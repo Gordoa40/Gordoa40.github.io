@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { setPageTitle } from '../utils';
 import { Link } from 'react-router-dom';
 import PageTransition from './PageTransition';
 
@@ -24,6 +25,9 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  useEffect(() => {
+    setPageTitle("Blog");
+  }, []);
   return (
     <PageTransition>
     <section className="py-12 bg-gray-100 dark:bg-gray-800">

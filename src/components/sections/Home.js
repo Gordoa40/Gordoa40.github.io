@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { setPageTitle } from '../utils';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Book, Briefcase, Mail } from 'lucide-react';
 import PageTransition from './PageTransition';
+
 const socialLinks = [
   { name: 'tiktok', url: 'https://www.tiktok.com/@adamgmakes' },
   { name: 'youtube', url: 'https://www.youtube.com/@AdamGMakes' },
@@ -25,6 +27,9 @@ const FeatureCard = ({ title, description, icon: Icon, link }) => (
 );
 
 const Home = () => {
+  useEffect(() => {
+    setPageTitle('Home');
+  }, []);
   return (
     <PageTransition>
       <div className="min-h-screen bg-gray-100 dark:bg-gray-800">
@@ -54,7 +59,7 @@ const Home = () => {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-black-400 dark:text-white  hover:text-gray-400 transition duration-300"
+                        className="text-black-400 dark:text-white hover:text-gray-400 transition duration-300"
                       >
                         <i className={`fab fa-${social.name} text-2xl`}></i>
                       </a>

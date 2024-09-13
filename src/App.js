@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { logEvent } from 'firebase/analytics';
-import { analytics } from './Firebase';
+import { analytics, logAnalyticsEvent} from './Firebase';
 import Layout from './components/Layout';
 import Home from './components/sections/Home';
 import About from './components/sections/About';
@@ -14,11 +14,12 @@ import Gallery from './components/sections/Gallery';
 import PortfolioItemPage from './components/portfolio/PortfolioItemPage';
 import ProteinFoldingGame from './components/sections/ProteinFoldingGame';
 
+
 function PageviewTracker() {
   const location = useLocation();
 
   useEffect(() => {
-    logEvent(analytics, 'page_view', {
+    logAnalyticsEvent('page_view', {
       page_path: location.pathname,
       page_title: document.title,
     });
@@ -28,6 +29,7 @@ function PageviewTracker() {
 }
 
 function App() {
+
   return (
     <Router>
       <PageviewTracker />

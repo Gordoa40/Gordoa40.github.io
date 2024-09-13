@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import { setPageTitle } from '../utils';
 import { motion } from 'framer-motion';
 import Masonry from 'react-masonry-css';
 import Lightbox from 'yet-another-react-lightbox';
@@ -74,6 +75,9 @@ const galleryData = [
 ];
 
 const Gallery = () => {
+  useEffect(() => {
+    setPageTitle("Gallery");
+  }, []);
   const [activeSection, setActiveSection] = useState(galleryData[0].section);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [itemIndex, setItemIndex] = useState(0);

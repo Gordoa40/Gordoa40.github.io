@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import { setPageTitle } from '../utils';
 import PageTransition from './PageTransition';
 
 const Contact = () => {
+  useEffect(() => {
+    setPageTitle('Contact');
+  }, []);
   const [status, setStatus] = useState('');
 
   const submitForm = async (e) => {

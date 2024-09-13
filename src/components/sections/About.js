@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { setPageTitle } from '../utils';
 import PageTransition from './PageTransition';
 import PhotoGallery from '../PhotoGallery';
 import { Link } from 'react-router-dom';
@@ -7,6 +8,9 @@ import { Link } from 'react-router-dom';
 const images = ['adam-1.jpg', 'adam-2.jpg', 'adam-3.JPG', 'adam-4.jpg', 'adam-5.JPG', 'adam-6.jpg'];
 
 const About = () => {
+  useEffect(() => {
+    setPageTitle('About');
+  }, []);
   return (
     <PageTransition>
     <section className="py-12 min-h-screen bg-gray-100 dark:bg-gray-800">
