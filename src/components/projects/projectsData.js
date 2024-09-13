@@ -34,14 +34,14 @@ export const projects = [
     id: 5,
     title: 'Mid-Century Chair',
     description: 'Mid-Century Chair',
-    images: ['chair-5.jpg', 'chair-1.jpeg','chair-2.jpeg','chair-3.jpg','chair-4.jpeg',],
+    images: ['chair-5.jpg', 'chair-1.JPEG','chair-2.JPEG','chair-3.jpg','chair-4.JPEG',],
     fullDescription: 'Mid-Century Chair',
     skills: ['Woodworking', 'CAD', 'CNC', 'Leather Working']
   },{
     id: 6,
     title: 'Nesting Side Tables',
     description: 'Nesting Side Tables',
-    images: ['nestSideTables-2.jpeg', 'nestSideTables-1.jpeg' ,'nestSideTables-3.jpeg','nestSideTables-4.jpeg'],
+    images: ['nestSideTables-2.JPEG', 'nestSideTables-1.JPEG' ,'nestSideTables-3.JPEG','nestSideTables-4.JPEG'],
     fullDescription: 'Nesting Side Tables',
     skills: ['Woodworking', 'CAD', 'CNC']
   },
