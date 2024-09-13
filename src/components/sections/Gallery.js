@@ -42,13 +42,13 @@ const galleryData = [
     section: 'Mechanical Design/CAD',
     items: [
       { type: 'image', src: '/images/Mechanical/robotArm-1.jpg', alt: 'Robot 1', caption: '6-Axis Robot Arm' },
-      { type: 'image', src: '/images/cad/cam1.PNG', alt: 'CAD Design 1', caption: '35mm Film Camera CAD Model (unfinished)' },
-      { type: 'image', src: '/images/cad/cam2.PNG', alt: 'CAD Design 2', caption: '35mm Film Camera CAD Model (unfinished)' },
-      { type: 'image', src: '/images/cad/cam3.PNG', alt: 'CAD Design 3', caption: '35mm Film Camera CAD Model (unfinished)' },
-      { type: 'image', src: '/images/cad/gripper1.PNG', alt: 'CAD Design 5', caption: 'Robotic Arm End Effector early design design' },
-      { type: 'image', src: '/images/cad/gripperclosing.GIF', alt: 'CAD Design 6', caption: 'Gripper 4-bar linkage closing animation' },
-      { type: 'image', src: '/images/cad/robotArm-1.PNG', alt: 'CAD Design 7', caption: 'Full robot arm assembly' },
-      { type: 'image', src: '/images/cad/cabinet-1.PNG', alt: 'CAD Design 8', caption: 'Custom cabinet design' },
+      { type: 'image', src: '/images/CAD/cam1.png', alt: 'CAD Design 1', caption: '35mm Film Camera CAD Model (unfinished)' },
+      { type: 'image', src: '/images/CAD/cam2.png', alt: 'CAD Design 2', caption: '35mm Film Camera CAD Model (unfinished)' },
+      { type: 'image', src: '/images/CAD/cam3.png', alt: 'CAD Design 3', caption: '35mm Film Camera CAD Model (unfinished)' },
+      { type: 'image', src: '/images/CAD/gripper1.png', alt: 'CAD Design 5', caption: 'Robotic Arm End Effector early design design' },
+      { type: 'image', src: '/images/CAD/gripperclosing.GIF', alt: 'CAD Design 6', caption: 'Gripper 4-bar linkage closing animation' },
+      { type: 'image', src: '/images/CAD/robotArm-1.png', alt: 'CAD Design 7', caption: 'Full robot arm assembly' },
+      { type: 'image', src: '/images/CAD/cabinet-1.png', alt: 'CAD Design 8', caption: 'Custom cabinet design' },
     ]
   },
   {
